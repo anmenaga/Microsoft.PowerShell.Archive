@@ -1075,7 +1075,7 @@ Describe "Test suite for Microsoft.PowerShell.Archive module" -Tags "BVT" {
             $archivePath = "$TestDrive\MixedSlashesDir1/MixedSlashesDir2/SampleMixedslashFile.zip"
             $expandPath = "$TestDrive\MixedSlashesExpandDir/DirA\DirB/DirC"
 
-            New-Item -Path (Split-Path $archivePath) -Type Directory | Out-Null
+            #New-Item -Path (Split-Path $archivePath) -Type Directory | Out-Null
             Compress-Archive -Path $sourcePath -DestinationPath $archivePath
             $archivePath | Should Exist
             
